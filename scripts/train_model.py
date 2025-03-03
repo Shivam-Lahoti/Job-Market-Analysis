@@ -5,7 +5,12 @@ from sklearn.metrics import root_mean_squared_error
 import joblib
 import os
 
-os.makedirs("data/models", exist_ok=True)
+path= "data/models"
+if not os.path.exists(path):
+    os.makedirs(path)
+    print("Path Created")
+else: 
+    print("Path already present")
 
 
 # Load cleaned data

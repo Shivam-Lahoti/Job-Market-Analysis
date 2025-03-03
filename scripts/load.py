@@ -2,9 +2,15 @@ import pandas as pd
 from sqlalchemy import create_engine
 import os
 
-os.makedirs("data/models", exist_ok=True)
+path= "data/models"
+if not os.path.exists(path):
+    os.makedirs(path)
+    print("Path Created")
+else: 
+    print("Path already present")
 
-df= pd.read_csv("data/cleaned/cleaned_jobs.csv")
+
+df= pd.read_csv(os.path.join(path,"cleaned_jobs.csv"))
 
 #Connect to PostgreSQL database 
 engine= create_engine('postgresql://user:password@localhost:5432/job_market')
