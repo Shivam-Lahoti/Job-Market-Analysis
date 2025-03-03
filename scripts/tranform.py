@@ -80,5 +80,5 @@ else:
     print("Warning: 'Job Description' column not found. Skipping skill extraction.")
 
 # Save cleaned data
-df.to_csv(os.path.join(path,"cleaned_jobs.csv"), insex= False)
+df.to_csv(os.path.join(path,"cleaned_jobs.csv"), index= False)
 print("Data cleaned and saved")

@@ -2,7 +2,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 import os
 
-path= "data/models"
+path= "data/cleaned"
 if not os.path.exists(path):
     os.makedirs(path)
     print("Path Created")
