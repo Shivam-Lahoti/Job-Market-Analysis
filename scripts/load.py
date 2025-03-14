@@ -13,7 +13,7 @@ else:
 df= pd.read_csv(os.path.join(path,"cleaned_jobs.csv"))
 
 #Connect to PostgreSQL database 
-engine= create_engine('postgresql://user:password@localhost:5432/job_market')
+engine= create_engine('postgresql://postgres:123456789%40Ab@localhost:5432/job_market')
 
 #save DataFrame to database
 
